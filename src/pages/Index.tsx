@@ -107,7 +107,7 @@ export default function Index() {
               ))}
             </nav>
 
-            <Button className="gradient-primary text-white hover:opacity-90">
+            <Button className="bg-red-500 text-white hover:bg-red-600">
               <Icon name="Plus" size={18} className="mr-2" />
               Разместить
             </Button>
