@@ -92,7 +92,7 @@ export default function Index() {
                 <Icon name="Sparkles" size={24} className="text-white" />
               </div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                МаркетПлейс
+                Турист Хаус
               </h1>
             </div>
 
@@ -245,7 +245,7 @@ export default function Index() {
                 <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
                   <Icon name="Sparkles" size={18} className="text-white" />
                 </div>
-                <h3 className="text-xl font-bold">МаркетПлейс</h3>
+                <h3 className="text-xl font-bold">Турист Хаус</h3>
               </div>
               <p className="text-gray-400">
                 Современная площадка объявлений для всех
@@ -286,7 +286,7 @@ export default function Index() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© 2024 МаркетПлейс. Все права защищены</p>
+            <p>© 2024 Турист Хаус. Все права защищены</p>
           </div>
         </div>
       </footer>
