@@ -3,6 +3,14 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import Icon from '@/components/ui/icon';
 
 const categories = [
@@ -97,7 +105,7 @@ export default function Index() {
             </div>
 
             <nav className="hidden md:flex items-center gap-6">
-              {['Главная', 'Категории', 'Мои объявления', 'Избранное', 'Профиль'].map((item) => (
+              {['Главная', 'Категории', 'Мои объявления', 'Избранное'].map((item) => (
                 <button
                   key={item}
                   className="text-gray-700 hover:text-purple-600 font-medium transition-colors"
@@ -105,6 +113,47 @@ export default function Index() {
                   {item}
                 </button>
               ))}
+              
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="flex items-center gap-2 text-gray-700 hover:text-purple-600 font-medium transition-colors">
+                    Профиль
+                    <Icon name="ChevronDown" size={16} />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-56">
+                  <DropdownMenuLabel className="flex items-center gap-2">
+                    <Icon name="User" size={16} />
+                    Мой аккаунт
+                  </DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem className="cursor-pointer">
+                    <Icon name="Settings" size={16} className="mr-2" />
+                    Настройки
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer">
+                    <Icon name="Bell" size={16} className="mr-2" />
+                    Уведомления
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer">
+                    <Icon name="Wallet" size={16} className="mr-2" />
+                    Кошелек
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer">
+                    <Icon name="MessageSquare" size={16} className="mr-2" />
+                    Сообщения
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem className="cursor-pointer">
+                    <Icon name="HelpCircle" size={16} className="mr-2" />
+                    Помощь
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer text-red-600">
+                    <Icon name="LogOut" size={16} className="mr-2" />
+                    Выйти
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </nav>
 
             <Button className="bg-red-500 text-white hover:bg-red-600">
